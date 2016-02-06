@@ -12,12 +12,12 @@ import com.hp.shiro.simplerbac.bean.ProtectedService;
 public class HomeController {
 	@RequestMapping(value="home")
 	public String home(HttpServletRequest req, HttpServletResponse response, Model model){
-		System.out.println("access to home controller.");
+//		System.out.println("access to home controller.");
 		String username = (String)SecurityUtils.getSubject().getPrincipal();
-		System.out.println("username:"+username);
+//		System.out.println("username:"+username);
 		model.addAttribute("username", username);
 		String method = req.getParameter("method");
-		System.out.println("method:"+method);
+//		System.out.println("method:"+method);
 		/*
 		 * method可能的值value包括：
 		 *  <input type="hidden" name="method" value="getUsers"/>
